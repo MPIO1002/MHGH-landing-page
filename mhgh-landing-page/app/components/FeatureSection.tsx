@@ -20,7 +20,7 @@ const FeatureSection = () => {
 			setActiveIdx(prevIdx => (prevIdx + 1) % features.length);
 		}, 5000);
 		return () => clearInterval(interval);
-	}, [features.length]);
+	}, []);
 
 	   return (
 			   <section className="relative w-full flex flex-col items-center justify-center py-10 md:py-20">
@@ -41,9 +41,9 @@ const FeatureSection = () => {
 										   {/* Desktop: 3 ảnh 3D */}
 										   <div className="hidden md:flex w-full h-full items-center justify-center">
 											   {[ -1, 0, 1 ].map((offset) => {
-												   let idx = (activeIdx + offset + features.length) % features.length;
-												   let isCenter = offset === 0;
-												   let isSide = offset !== 0;
+												   const idx = (activeIdx + offset + features.length) % features.length;
+												   const isCenter = offset === 0;
+												   const isSide = offset !== 0;
 												   const itemWidth = isCenter ? '50%' : '25%';
 												   const marginLeft = isSide && offset === -1 ? '-8%' : undefined;
 												   const marginRight = isSide && offset === 1 ? '-8%' : undefined;

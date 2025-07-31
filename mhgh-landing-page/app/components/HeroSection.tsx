@@ -132,7 +132,7 @@ const HeroSection = () => {
       </div>
 
       {/* Mobile Grid Layout - Bottom */}
-      <div className="block lg:hidden absolute bottom-55 left-1/2 transform -translate-x-1/2 z-40 w-full max-w-sm p-10">
+      <div className="block lg:hidden absolute bottom-25 min-[400px]:bottom-50 left-1/2 transform -translate-x-1/2 z-40 w-full max-w-sm p-10">
         <div className="grid grid-cols-2 grid-rows-2 gap-x-2 gap-y-0">
           {/* Row 1 - Left: App Store and APK stacked */}
           <div className="flex flex-col space-y-1">

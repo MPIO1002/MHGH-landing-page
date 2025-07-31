@@ -4,7 +4,7 @@ import FeatureSection from './FeatureSection';
 
 const ContentSection = () => {
   return (
-    <section className="relative w-full h-auto z-30 md:-mt-[450px] 2xl:-mt-[560px] flex flex-col items-center justify-start pt-10 md:pt-20">
+    <section className="relative w-full h-auto z-30 md:-mt-[450px] 2xl:-mt-[560px] flex flex-col items-center justify-start pt-10 md:pt-20 overflow-hidden">
       {/* Desktop Background */}
       <div className="hidden md:block absolute inset-0 w-full pointer-events-none select-none">
         <img
@@ -14,7 +14,7 @@ const ContentSection = () => {
         />
       </div>
       {/* Mobile Background */}
-      <div className="md:hidden absolute inset-0 w-full pointer-events-none select-none -mt-[390px] xs:-mt-[650px]">
+      <div className="md:hidden absolute inset-0 w-full pointer-events-none select-none -mt-[400px] overflow-hidden">
         <img
           src="/mainMobileBg.png"
           alt="Main Background Mobile"

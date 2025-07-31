@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-screen w-full">
       {/* Desktop Background */}
       <div className="hidden md:block absolute inset-0 w-full h-full">
         <img

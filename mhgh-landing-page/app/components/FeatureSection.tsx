@@ -22,7 +22,7 @@ const FeatureSection = () => {
     }, []);
 
     return (
-        <section className="relative w-full flex flex-col items-center justify-center py-10 md:py-20">
+        <section className="relative w-full flex flex-col items-center justify-center py-10 md:py-20 xl:mb-80 -mt-15 min-[400px]:mt-0">
             {/* Title */}
             <div className="w-full flex flex-col items-center z-10 mb-6">
                 <div className="hidden md:flex justify-center mb-6">

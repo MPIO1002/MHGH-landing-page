@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 
 const features = [
     { id: 1, img: "/feature_1.jpeg" },
@@ -27,10 +26,10 @@ const FeatureSection = () => {
             {/* Title */}
             <div className="w-full flex flex-col items-center z-10 mb-6">
                 <div className="hidden md:flex justify-center mb-6">
-                    <Image src="/featureLabel.webp" alt="Feature Label Desktop" width={400} height={100} className="w-auto h-20 md:h-22 xl:h-24" priority loading="lazy" />
+                    <img src="/featureLabel.png" alt="Feature Label Desktop" width={400} height={100} className="w-auto h-20 md:h-22 xl:h-24" loading="lazy" />
                 </div>
                 <div className="flex md:hidden justify-center mb-4">
-                    <Image src="/featureMobileLabel.webp" alt="Feature Label Mobile" width={200} height={50} className="w-auto h-12" priority loading="lazy" />
+                    <img src="/featureMobileLabel.png" alt="Feature Label Mobile" width={200} height={50} className="w-auto h-12" loading="lazy" />
                 </div>
             </div>
             {/* Custom 3D Carousel */}
@@ -56,7 +55,7 @@ const FeatureSection = () => {
                                     >
                                         <div style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                             <div style={{ position: 'relative', display: 'inline-block', width: '100%', height: '100%' }}>
-                                                <Image
+                                                <img
                                                     src={features[idx].img}
                                                     alt={"Feature " + features[idx].id}
                                                     width={imgSize}
@@ -75,7 +74,7 @@ const FeatureSection = () => {
                             <div className="flex items-center justify-center z-10 w-full h-full">
                                 <div style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                     <div style={{ position: 'relative', display: 'inline-block', width: '100%', height: '100%' }}>
-                                        <Image
+                                        <img
                                             src={features[activeIdx].img}
                                             alt={"Feature " + features[activeIdx].id}
                                             width={220}
@@ -97,7 +96,7 @@ const FeatureSection = () => {
                             onClick={() => setActiveIdx(idx)}
                             className="p-0 bg-transparent border-none cursor-pointer"
                         >
-                            <Image
+                            <img
                                 src={activeIdx === idx ? "/paginationActive.svg" : "/pagination.svg"}
                                 alt={activeIdx === idx ? "active" : "dot"}
                                 width={25}
@@ -110,14 +109,14 @@ const FeatureSection = () => {
                 </div>
                 {/* Arrow Controls */}
                 {/* Arrow Controls responsive */}
-                <div className="absolute md:-left-10 left-2 top-1/2 -translate-y-1/2 z-30 cursor-pointer">
+                <div className="absolute md:-left-5 left-2 top-1/2 -translate-y-1/2 z-30 cursor-pointer">
                     <button onClick={() => setActiveIdx((activeIdx - 1 + features.length) % features.length)} className="bg-transparent border-none">
-                        <Image src="/arrow.png" alt="Trái" width={40} height={40} className="cursor-pointer md:w-[40px] md:h-[40px] w-[22px] h-[22px]" loading="lazy" />
+                        <img src="/arrow.png" alt="Trái" width={204} height={168} className="cursor-pointer md:w-[60px] md:h-[50px] w-[22px] h-[22px]" loading="lazy" />
                     </button>
                 </div>
-                <div className="absolute md:-right-10 right-2 top-1/2 -translate-y-1/2 z-30 cursor-pointer">
+                <div className="absolute md:-right-5 right-2 top-1/2 -translate-y-1/2 z-30 cursor-pointer">
                     <button onClick={() => setActiveIdx((activeIdx + 1) % features.length)} className="bg-transparent border-none rotate-180">
-                        <Image src="/arrow.png" alt="Phải" width={40} height={40} className="cursor-pointer md:w-[40px] md:h-[40px] w-[22px] h-[22px]" loading="lazy" />
+                        <img src="/arrow.png" alt="Phải" width={204} height={168} className="cursor-pointer md:w-[60px] md:h-[50px] w-[22px] h-[22px]" loading="lazy" />
                     </button>
                 </div>
             </div>

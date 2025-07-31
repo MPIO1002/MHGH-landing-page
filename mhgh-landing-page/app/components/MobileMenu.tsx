@@ -39,8 +39,8 @@ const MobileMenu = ({ menuItems }: MobileMenuProps) => {
           loading="lazy"
         />
         <Image
-          src="/youtube_2.png"
-          alt="YouTube"
+          src="/tiktok-2.png"
+          alt="TikTok"
           width={32}
           height={32}
           className="h-8 w-8 cursor-pointer hover:opacity-80 transition-opacity"

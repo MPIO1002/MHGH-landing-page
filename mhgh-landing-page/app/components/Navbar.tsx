@@ -11,29 +11,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="relative">
-      {/* Desktop Background */}
-      <div className="hidden md:block absolute inset-0 w-full h-full">
-        <Image
-          src="/navBg.svg"
-          alt="Navigation Background"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
-      
-      {/* Mobile Background */}
-      <div className="md:hidden absolute inset-0 w-full h-full">
-        <Image
-          src="/mobileNavBg.png"
-          alt="Mobile Navigation Background"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
-
+    <nav className="relative bg-gradient-to-r from-[#3f0c01] via-[#631405] to-[#3f0c01]">
       {/* Navbar Content */}
       <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20 relative">
@@ -44,7 +22,7 @@ const Navbar = () => {
               alt="Logo"
               width={160}
               height={80}
-              className="h-12 md:h-24 xl:h-30 w-auto relative top-0 md:top-10 xl:top-10 left-0 md:left-15 xl:left-20"
+              className="h-12 md:h-15 xl:h-30 w-auto relative top-0 md:top-0 xl:top-10 left-0 md:left-0 xl:left-20"
               priority
             />
           </div>
@@ -56,9 +34,9 @@ const Navbar = () => {
                 <a
                   key={index}
                   href={item.href}
-                  className="text-amber-100 hover:text-yellow-200 px-2 lg:px-3 py-2 text-xs md:text-sm lg:text-base xl:text-lg font-medium transition-colors duration-200 flex items-center space-x-1 lg:space-x-2 whitespace-nowrap"
+                  className="text-white px-2 lg:px-3 py-2 text-xs md:text-sm lg:text-base xl:text-lg font-medium transition-colors duration-200 flex items-center space-x-1 lg:space-x-2 whitespace-nowrap"
                 >
-                  <i className={`${item.icon} text-xs md:text-sm text-amber-200`}></i>
+                  <i className={`${item.icon} text-xs md:text-sm text-gray-100`}></i>
                   <span>{item.name}</span>
                 </a>
               ))}
